@@ -2,7 +2,7 @@ external_signature=$(curl -Lsf "https://www.palemoon.org/download.php?mirror=sig
 if [[ ! -f software/palemoon/palemoon.sig || $external_signature != $(cat software/palemoon/palemoon.sig) ]]; then
 	echo $0: downloading latest Pale Moon release
 	curl -Lsf "https://www.palemoon.org/download.php?mirror=us&bits=64&type=linuxgtk3" | unxz | tar xC software &> /dev/null
-	curl -Lsf "https://www.palemoon.org/download.php?mirror=sig&bits=64&type=linuxgtk3" > software/palemoon/palemoon.sig
+	echo $external_signature > software/palemoon/palemoon.sig
 	mkdir software/palemoon/profile
 fi
 
