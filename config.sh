@@ -9,6 +9,7 @@ gamedata_sources=(
 	"https://infinity.unstable.life/Flashpoint/Data/Games"
 )
 database_sources=(
+	"https://download.unstable.life/flashpoint.sqlite"
 	"https://unstable.life/updater-data/12-1/Data/flashpoint.sqlite"
 	"https://infinity.unstable.life/Flashpoint/Data/flashpoint.sqlite"
 )
